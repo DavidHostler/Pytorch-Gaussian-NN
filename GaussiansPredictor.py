@@ -88,5 +88,4 @@ results = pd.DataFrame({'x': X,
 
 #Save the csv file to your folder.
 #There will be two columns, x(eigenvalues) and y(preds)
-results.to_csv('FILE PATH')
-   
+results.to_csv('FILE PATH/results.csv')
