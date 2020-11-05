@@ -79,7 +79,7 @@ for eigenvalues in eigen_arr:
 #Set of predictions for all eigenvalues  
 Y = []
 for i in range(len(eigen_arr)):
-    y_pred.append(arr_pred[0][i].tolist())
+    Y.append(arr_pred[0][i].tolist())
 
 results = pd.DataFrame({'x': X,
                         'y': Y
