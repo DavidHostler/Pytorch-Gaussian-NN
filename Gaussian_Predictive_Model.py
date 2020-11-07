@@ -36,8 +36,7 @@ class Gauss(nn.Module):
             self.predict = torch.nn.Linear(n_hidden, n_output)   
             
         def forward(self, x):
-            x = F.elu(self.hidden(x))
-            #x = self.dropout(self.hidden(x))
+            x = F.elu(self.hidden(x))            
             x = self.predict(x)             
             return x
 
@@ -61,7 +60,7 @@ for i in range(1,EPOCHS+1):
     optimizer.zero_grad()    
     loss.backward()          
     optimizer.step()          
-    #y_pred.append(prediction.data)
+     
     train_loss.append(loss.data.numpy())
     
     
@@ -84,9 +83,7 @@ def predict(x, model):
     losst.backward() 
     optimizer.step()   
     return preds.data.tolist()
-
-#tester = eigen_arr[0:3] 
-
+ 
 
 
 def gauss_broad(eigen_arr,  c, dict, x): 
